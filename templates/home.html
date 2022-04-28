@@ -68,8 +68,17 @@
 
 {% block content %}
     <script>
-        jQuery(".square_left").mouseenter(function() {console.log("coucou !")});
+        function toto() {
+            $(".square_left").mouseenter(function() {console.log("coucou !")});
+        }
     </script>
+    <script>
+        $(document).ready(function(){
+            console.log('DOM READY');
+            toto();
+        });
+    </script>
+
     <div class="move_area">
 <!--        <div class="square" id="btn_validate" onclick="test()">-->
         <div id="btn_validate" onclick="test()">
