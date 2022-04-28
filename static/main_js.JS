@@ -56,6 +56,7 @@
     }
 })();
 
+
 function test() {
     alert("Argh!");
 }
@@ -64,6 +65,7 @@ function move(element, step, direction) {
     if (direction == "down") {
         var old_top = element.getBoundingClientRect().top;
         var new_top = old_top + step;
+        console.log(old_top + " - " + new_top);
         element.style.top = new_top + "px";
     } else if (direction == "up") {
         var old_top = element.getBoundingClientRect().top;
@@ -82,6 +84,6 @@ function move(element, step, direction) {
 }
 
 function IsOverElem(mousePos, element) {
-    var range = element.getBoundingClientRect()
-    return (mousePos.x >= range.left) && (mousePos.x <= range.right) && (mousePos.y >= range.top) && (mousePos.y <= range.bottom)
+    var range = element.getBoundingClientRect();
+    return (mousePos.x >= range.left) && (mousePos.x <= range.right) && (mousePos.y >= range.top) && (mousePos.y <= range.bottom);
 }

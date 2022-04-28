@@ -1,14 +1,15 @@
 {% extends "layout.html" %}
 
 {% block script %}
-    <script src="{{url_for('static', filename='main_js.JS')}}"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+
+
 {% endblock script %}
 
 {% block style %}
     <style>
     .move_area {
-        position: absolute;
-        top: 50px; left: 250px;
+        position: relative;
         height: 500px;
         width: 1000px;
         border: solid;
@@ -26,53 +27,56 @@
     .square:hover {
         background-color: blue;
     }
+    .border {
+        border: solid;
+        border-color: Aqua;
+        border-width: 1px;
+    }
     .square_left {
         position: absolute;
         top: -10px; left: -10px;
         height: 70px;
         width: 20px;
-        border: solid;
-        border-color: Aqua;
-        border-width: 1px;
     }
     .square_right {
         position: absolute;
         top: -10px; left: 40px;
         height: 70px;
         width: 20px;
-        border: solid;
-        border-color: Aqua;
-        border-width: 1px;
     }
     .square_top {
         position: absolute;
         top: -10px; left: 10px;
         height: 35px;
         width: 30px;
-        border: solid;
-        border-color: Aqua;
-        border-width: 1px;
     }
     .square_bot {
         position: absolute;
         top: 25px; left: 10px;
         height: 35px;
         width: 30px;
-        border: solid;
-        border-color: Aqua;
-        border-width: 1px;
+    }
+    #btn_validate {
+        position: absolute;
+        top: 50px; left: 250px;
+        height: 50px;
+        width: 50px;
+        background-color: gray;
     }
     </style>
 {% endblock style %}
 
 {% block content %}
-
+    <script>
+        jQuery(".square_left").mouseenter(function() {console.log("coucou !")});
+    </script>
     <div class="move_area">
-        <div class="square" id="btn_validate" onclick="test()">
-            <div class="square_left" id="btn_left"></div>
-            <div class="square_right" id="btn_right"></div>
-            <div class="square_top" id="btn_top"></div>
-            <div class="square_bot" id="btn_bot"></div>
+<!--        <div class="square" id="btn_validate" onclick="test()">-->
+        <div id="btn_validate" onclick="test()">
+            <div class="square_left border" id="btn_left"></div>
+            <div class="square_right border" id="btn_right"></div>
+            <div class="square_top border" id="btn_top"></div>
+            <div class="square_bot border" id="btn_bot"></div>
         </div>
     </div>
 
