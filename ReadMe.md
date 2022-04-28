@@ -1,3 +1,8 @@
+https://secret-hunt.herokuapp.com/
+
+Pour déployer une autre branche que main :
+`git push heroku testbranch:main`
+
 - Position absolute, bon choix ?
 - Hiérarchie dans le CSS : pour le bouton recouvert de 4 zones
 - Limiter les calculs pour diminuer le délai entre les calculs : comment stocker la position des éléments
