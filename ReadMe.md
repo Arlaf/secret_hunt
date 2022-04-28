@@ -2,6 +2,7 @@ https://secret-hunt.herokuapp.com/
 
 Pour déployer une autre branche que main :
 `git push heroku testbranch:main`
+Mail heroku : akroo-...
 
 - Position absolute, bon choix ?
 - Hiérarchie dans le CSS : pour le bouton recouvert de 4 zones
