@@ -7,12 +7,15 @@
         <title>???</title>
     {% endif %}
 
-    {% block script %}{% endblock %}
+    {% block script_head %}{% endblock script_head %}
 
-    {% block style %}{% endblock %}
+    {% block style %}{% endblock style %}
 </head>
 
 <body>
+
+    {% block script_body %}{% endblock script_body %}
+
     <div>
         <a href="/home">Home</a><br>
         <a href="/table">Table</a><br>
