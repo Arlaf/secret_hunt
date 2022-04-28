@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+
+{% block script %}
+    <script src="{{url_for('static', filename='main_js.JS')}}"></script>
+{% endblock script %}
+
+{% block style %}
+    <style>
+    .move_area {
+        position: absolute;
+        top: 50px; left: 250px;
+        height: 500px;
+        width: 1000px;
+        border: solid;
+        border-color: gray;
+        border-width: 1px;
+        background-color: MintCream;
+    }
+    .square {
+        position: absolute;
+        top: 50px; left: 250px;
+        height: 50px;
+        width: 50px;
+        background-color: gray;
+    }
+    .square:hover {
+        background-color: blue;
+    }
+    .square_left {
+        position: absolute;
+        top: -10px; left: -10px;
+        height: 70px;
+        width: 20px;
+        border: solid;
+        border-color: Aqua;
+        border-width: 1px;
+    }
+    .square_right {
+        position: absolute;
+        top: -10px; left: 40px;
+        height: 70px;
+        width: 20px;
+        border: solid;
+        border-color: Aqua;
+        border-width: 1px;
+    }
+    .square_top {
+        position: absolute;
+        top: -10px; left: 10px;
+        height: 35px;
+        width: 30px;
+        border: solid;
+        border-color: Aqua;
+        border-width: 1px;
+    }
+    .square_bot {
+        position: absolute;
+        top: 25px; left: 10px;
+        height: 35px;
+        width: 30px;
+        border: solid;
+        border-color: Aqua;
+        border-width: 1px;
+    }
+    </style>
+{% endblock style %}
+
+{% block content %}
+
+    <div class="move_area">
+        <div class="square" id="btn_validate" onclick="test()">
+            <div class="square_left" id="btn_left"></div>
+            <div class="square_right" id="btn_right"></div>
+            <div class="square_top" id="btn_top"></div>
+            <div class="square_bot" id="btn_bot"></div>
+        </div>
+    </div>
+
+    <div>
+        <p id="X"></p>
+        <p id="Y"></p>
+    </div>
+{% endblock content %}
