@@ -58,3 +58,6 @@ $('#my-table tr:first-of-type td:last-of-type ')
 
 https://www.cssportal.com/css-clip-path-generator/
 https://api.jquery.com/position/
+Tracker la souris : https://stackoverflow.com/questions/7790725/javascript-track-mouse-position
+Position d'un élément : https://stackoverflow.com/questions/6146027/using-javascript-how-to-get-the-position-of-an-element
+Déploiement Heroku : https://www.younup.fr/blog/heroku-pour-deployer-votre-application-python-flask-dans-le-cloud

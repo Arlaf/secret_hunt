@@ -1,7 +1,6 @@
 {% extends "layout.html" %}
 
 {% block script_head %}
-    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     <script src="{{url_for('static', filename='home.JS')}}"></script>
 {% endblock script_head %}
 
@@ -9,7 +8,7 @@
     <link rel="stylesheet" href="{{url_for('static', filename='home.css')}}">
 {% endblock style %}
 
-{% block content %}
+
 
 {% block script_body %}
     <script>
@@ -20,6 +19,7 @@
     </script>
 {% endblock script_body %}
 
+{% block content %}
     <div class="move_area">
         <div class="moving_block">
             <div class="left_trigger"></div>

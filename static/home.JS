@@ -16,16 +16,15 @@ function submit() {
 function move(elem, direction, max_x, max_y) {
     $(".move_area").addClass("move_area_visible");
 
-    step = 30;
-
     // Constantes
-    margin = 30;
-    h = 30;
-    w = 70;
+    const step = 30;
+    const margin = 30;
+    const h = 30;
+    const w = 70;
 
     // Coordonnées initiales de la grande zone
-    x = elem.position().left;
-    y = elem.position().top;
+    var x = elem.position().left;
+    var y = elem.position().top;
 
     // Modification des coordonnées
     if (direction == "left") {
@@ -39,10 +38,10 @@ function move(elem, direction, max_x, max_y) {
     }
 
     // Coordonnées finales du sous-élement
-    sub_x1 = x + margin;
-    sub_x2 = sub_x1 + w;
-    sub_y1 = y + margin;
-    sub_y2 = sub_y1 + h;
+    var sub_x1 = x + margin;
+    var sub_x2 = sub_x1 + w;
+    var sub_y1 = y + margin;
+    var sub_y2 = sub_y1 + h;
     console.log("move : " + direction + " " + max_x + " " + max_y);
     console.log("sub_x1 : " + sub_x1);
 
