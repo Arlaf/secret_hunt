@@ -1,4 +1,5 @@
-var solution = ["3-1", "3-2", "3-3"];
+var solution = ["1-6", "2-1", "4-7", "5-3", "5-5", "6-2", "7-4"];
+// p = 22140217092320
 
 function cell_clicked(elem) {
     console.log("cell_clicked : " + $(elem).attr("id"));
