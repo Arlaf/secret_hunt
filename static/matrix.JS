@@ -1,10 +1,16 @@
 var solution = ["1-6", "2-1", "4-7", "5-3", "5-5", "6-2", "7-4"];
 // p = 22140217092320
 
+// SOLUTION TEST :
+//var solution = ["1-1","1-2","1-3","1-4","1-5","1-6","1-7","2-1","2-2","2-3","2-4","2-5","2-6","2-7","3-1","3-2","3-3","3-4","3-5","3-6","3-7","4-1","4-2","4-3","4-4","4-5","4-6","4-7","5-1","5-2","5-3","5-4","5-5","5-6","5-7","6-1","6-2","6-3","6-4","6-5","6-6","6-7","7-1","7-2","7-3","7-4","7-5","7-6"];
+
+
 function cell_clicked(elem) {
     console.log("cell_clicked : " + $(elem).attr("id"));
     switch_selection($(elem));
-    check_solution();
+    if (check_solution()) {
+        alert("Bravo !")
+    }
 }
 
 function switch_selection(elem) {
@@ -24,4 +30,6 @@ function check_solution() {
         result = current_guess.every(function(id) { return solution.includes(id) });
     }
     console.log(result);
+    return result;
 }
+

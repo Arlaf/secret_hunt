@@ -37,7 +37,7 @@
     vertical-align: middle;
     color: white;
     line-height: var(--btn_height);
-
+    cursor: pointer;
 }
 .left_trigger {
     position: absolute;
@@ -66,4 +66,20 @@
     left: var(--margin);
     height: calc(var(--margin) + var(--btn_height) / 2);
     width: var(--btn_width);
+}
+.borders {
+    border: solid;
+    border-color: blue;
+    border-width: 2px;
+}
+
+#lock_btn {
+    position: static;
+    height: 38px;
+    width: 130px;
+    background-color: gray;
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+    cursor: pointer;
 }

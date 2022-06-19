@@ -20,6 +20,7 @@
 {% endblock script_body %}
 
 {% block content %}
+    <input id="input_pwd" type="text" placeholder="Mot de passe">
     <div class="move_area">
         <div class="moving_block">
             <div class="left_trigger"></div>
@@ -29,9 +30,10 @@
             <div class="submit_btn" onclick="submit()">Valider</div>
         </div>
     </div>
+    <div id="lock_btn" style="display:none" onclick="lock()">verr</div>
+    <a id="matrix_link" href="/matrix" style="display:none">Aller à la matrice</a>
 
     <div>
-        <p id="X"></p>
-        <p id="Y"></p>
+        <p id="display_move_count">0</p>
     </div>
 {% endblock content %}
