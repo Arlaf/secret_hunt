@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block script_head %}
+{% endblock script_head %}
+
+{% block style %}
+    <link rel="stylesheet" href="{{url_for('static', filename='common.css')}}">
+{% endblock style %}
+
+{% block content %}
+    <div class="topcontainer">
+        <img src="{{ imgs[0] }}" alt="<oups_l'image_est_introuvable>" width="1200px">
+        <img src="{{ imgs[1] }}" alt="<oups_l'image_est_introuvable>" width="1200px">
+    </div>
+{% endblock content %}
+

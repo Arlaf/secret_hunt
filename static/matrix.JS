@@ -9,7 +9,8 @@ function cell_clicked(elem) {
     console.log("cell_clicked : " + $(elem).attr("id"));
     switch_selection($(elem));
     if (check_solution()) {
-        alert("Bravo !")
+        document.getElementById("clue_link").style.display = "block";
+        alert("Bravo ! Cliquez sur le lien ci-dessous :)")
     }
 }
 
