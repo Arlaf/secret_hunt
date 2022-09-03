@@ -1,8 +1,8 @@
 var count_move = 0;
-var escape_active = false;
-var duration_lock = 300;
+var duration_lock = 100;
 var valid_click_count = 0;
 var help_active = false;
+var duration_lock_step = 50;
 
 function mouse_trigger(area_width, area_height) {
     $(".left_trigger").mouseenter(function(event) {event.stopImmediatePropagation(); move($(".moving_block"), "right", area_width, area_height)});
@@ -19,15 +19,8 @@ function submit() {
     if (!check_pass()){
         alert("Faux");
     } else {
-        valid_click_count += 1;
-        if (valid_click_count == 1){
-            document.getElementById("input_pwd").disabled = true;
-            escape_active = true;
-            alert("Le mot de passe est bon, recliquez sur le bouton");
-        } else {
-            alert("Bravo ! Entrez dans la matrice avec le lien ci-dessous.");
-            document.getElementById("matrix_link").style.display = "block";
-        }
+        alert("Bravo ! Entrez dans la matrice avec le lien ci-dessous.");
+        document.getElementById("matrix_link").style.display = "block";
     }
 }
 
@@ -47,7 +40,7 @@ function get_help(){
         help_active = true;
         document.getElementById("lock_btn").style.display = "block";
     } else {
-        duration_lock += 100;
+        duration_lock += duration_lock_step;
     }
     document.getElementById("lock_btn").innerHTML = "Verrouiller pendant " + duration_lock / 1000 + " seconde(s)";
 }
@@ -59,7 +52,7 @@ function check_pass(){
 
 function move(elem, direction, max_x, max_y) {
     console.log(elem);
-    if (escape_active && !elem[0].classList.contains("locked")){
+    if (check_pass() && !elem[0].classList.contains("locked")){
         $(".move_area").addClass("move_area_visible");
 
         // Constantes

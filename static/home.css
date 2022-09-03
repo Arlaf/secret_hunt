@@ -22,7 +22,7 @@
 
 .moving_block{
     position: absolute;
-    top: calc(-1 * var(--margin));
+    top: calc(0 * var(--margin));
     left: calc(3.5 * var(--margin));
     height: calc(2 * var(--margin) + var(--btn_height));
     width: calc(2 * var(--margin) + var(--btn_width));
