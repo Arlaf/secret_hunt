@@ -1,0 +1,11 @@
+.container{
+    margin: 150px;
+}
+
+.hcenter{
+    position: relative;
+    left: 45%;
+}
+.hright{
+    left: 50%;
+}

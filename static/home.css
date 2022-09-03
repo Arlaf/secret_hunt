@@ -10,6 +10,7 @@
     height: 420px;
     width: 900px;
     margin: 30px;
+    top: 25px;
 }
 .move_area_visible{
     border: solid;
@@ -19,10 +20,11 @@
 }
 
 
+
 .moving_block{
     position: absolute;
-    top: calc(3 * var(--margin));
-    left: calc(3 * var(--margin));
+    top: calc(0 * var(--margin));
+    left: calc(14 * var(--margin));
     height: calc(2 * var(--margin) + var(--btn_height));
     width: calc(2 * var(--margin) + var(--btn_width));
 }
@@ -74,7 +76,6 @@
 }
 
 #lock_btn {
-    position: static;
     height: 38px;
     width: 130px;
     background-color: gray;
@@ -82,4 +83,14 @@
     vertical-align: middle;
     color: white;
     cursor: pointer;
+    left: 44%;
+    position: relative;
+}
+#input_pwd{
+    width: 136px;
+}
+#label_pwd{
+    top: 11%;
+    position: absolute;
+    left: 47%;
 }

@@ -25,7 +25,7 @@ function submit() {
             escape_active = true;
             alert("Le mot de passe est bon, recliquez sur le bouton");
         } else {
-            alert("Bravo ! C'est maintenant l'heure de la matrice !");
+            alert("Bravo ! Entrez dans la matrice avec le lien ci-dessous.");
             document.getElementById("matrix_link").style.display = "block";
         }
     }

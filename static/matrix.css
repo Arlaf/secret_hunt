@@ -1,0 +1,18 @@
+.cell {
+    border: solid;
+    border-color: gray;
+    border-width: 1px;
+    cursor: pointer;
+}
+.cell:hover {
+    background-color: cyan;
+}
+.cell-selected {
+    background-color: lightblue;
+}
+#matrix {
+    border-collapse: collapse;
+}
+#matrix td {
+    padding: 10px;
+}

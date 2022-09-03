@@ -6,6 +6,7 @@
 
 {% block style %}
     <link rel="stylesheet" href="{{url_for('static', filename='home.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='common.css')}}">
 {% endblock style %}
 
 
@@ -20,20 +21,20 @@
 {% endblock script_body %}
 
 {% block content %}
-    <input id="input_pwd" type="text" placeholder="Mot de passe">
-    <div class="move_area">
-        <div class="moving_block">
-            <div class="left_trigger"></div>
-            <div class="right_trigger"></div>
-            <div class="up_trigger"></div>
-            <div class="down_trigger"></div>
-            <div class="submit_btn" onclick="submit()">Valider</div>
+    <div class="container">
+        <p class="hcenter" id="label_pwd">Mot de passe</p>
+        <input id="input_pwd" type="text" placeholder="Mot de passe" class="hcenter">
+        <div class="move_area">
+            <div class="moving_block">
+                <div class="left_trigger"></div>
+                <div class="right_trigger"></div>
+                <div class="up_trigger"></div>
+                <div class="down_trigger"></div>
+                <div class="submit_btn" onclick="submit()">Valider</div>
+            </div>
         </div>
-    </div>
-    <div id="lock_btn" style="display:none" onclick="lock()">verr</div>
-    <a id="matrix_link" href="/matrix" style="display:none">Aller à la matrice</a>
-
-    <div>
-        <p id="display_move_count">0</p>
+        <div id="lock_btn" onclick="lock()" style="display:none" class="hright">verr</div>
+        <a id="matrix_link" href="/matrix" style="display:none" class="hcenter">Aller à la matrice</a>
+        <p id="display_move_count" style="display:none" class="hcenter">0</p>
     </div>
 {% endblock content %}
