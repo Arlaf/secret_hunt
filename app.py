@@ -10,12 +10,12 @@ def home():
     return render_template('home.html')
 
 
-@app.route('/matrix')
+@app.route('/matrix', methods=['POST'])
 def table():
     return render_template('matrix.html')
 
 
-@app.route('/clue')
+@app.route('/location', methods=['POST'])
 def clue():
     imgs = [
         os.path.join(app.config['img_folder'], 'map.jpg'),

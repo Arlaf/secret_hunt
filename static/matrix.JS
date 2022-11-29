@@ -10,7 +10,7 @@ function cell_clicked(elem) {
     switch_selection($(elem));
     if (check_solution()) {
         document.getElementById("clue_link").style.display = "block";
-        alert("Bravo ! Cliquez sur le lien ci-dessous :)")
+        alert("Bravo ! Cliquez sur le bouton qui vient d'apparaître ce-dessous :)")
     }
 }
 

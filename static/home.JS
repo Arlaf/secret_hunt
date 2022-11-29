@@ -19,7 +19,7 @@ function submit() {
     if (!check_pass()){
         alert("Faux");
     } else {
-        alert("Bravo ! Entrez dans la matrice avec le lien ci-dessous.");
+        alert("Bravo ! Entrez dans la matrice en cliquant sur le bouton qui vient d'apparaître ci-dessous.");
         document.getElementById("matrix_link").style.display = "block";
     }
 }
