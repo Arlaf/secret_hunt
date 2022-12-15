@@ -18,8 +18,10 @@ def table():
 @app.route('/location', methods=['POST'])
 def clue():
     imgs = [
-        os.path.join(app.config['img_folder'], 'map.jpg'),
-        os.path.join(app.config['img_folder'], 'photo01.jpg')
+        os.path.join(app.config['img_folder'], 'carte.png'),
+        os.path.join(app.config['img_folder'], 'photo01.jpg'),
+        os.path.join(app.config['img_folder'], 'photo02.jpg'),
+        os.path.join(app.config['img_folder'], 'photo03.jpg')
     ]
     return render_template('clue.html', imgs=imgs)
 
